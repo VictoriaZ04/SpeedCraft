@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../css/general.css" />
+  <link rel="stylesheet" href="../../css/header.css" />
+  <link rel="stylesheet" href="../../css/desktop.css" />
+  <link rel="stylesheet" href="../../css/modal.css" />
+  <title>Overwolf Sample App - Desktop page</title>
+</head>
+
+<body class="desktop">
+  <!-- -------------------------------- Header ------------------------------- -->
+
+ 
+
+  <!-- --------------------------------- Main -------------------------------- -->
+  <main>
+    <div class="desktopTop">   
+      <header id="header" class="app-header1">
+        <div class="window-controls-group">
+          <button class="icon window-control" id="minimizeButton">
+            <svg>
+              <use xlink:href="/img/header_icons.svg#window-control_minimize" />
+            </svg>
+          </button>
+          <button class="icon window-control" id="maximizeButton">
+            <svg>
+              <use xlink:href="/img/header_icons.svg#window-control_maximize" />
+            </svg>
+          </button>
+          <button class="icon window-control window-control-close" id="closeButton">
+            <svg>
+              <use xlink:href="/img/header_icons.svg#window-control_close" />
+            </svg>
+          </button>
+        
+      </header>
+      <h1>Speedcraft: A Beginner's Tool for Speedrunning</h1> 
+       
+    </div>
+    <div class="desktopBottom">
+      <!-- Launch Fortnite! -->
+      <div id="left">
+        <h3>Recommended Settings</h3>
+        <ul class="settings">
+          <li>Increase Render Distance</li>
+          <li>Turn on Hitboxes</li>
+          <li>Turn subtitles on</li>
+          <li>Volume up</li>
+        </ul>
+      </div>
+      <!-- Launch Fortnite! -->
+      <div id="middle">
+        <h3>Recommended Seed:</h3>
+        <div class="settings">
+          <h2 id = "setting" value=></h2>
+          <script> 
+            let theList = ["1955471898","6254448515498253750","6254448515498253750","-7453340963196383811","1156391694"]
+      
+              function randomWordPicker(aList){
+                  let theListLength = theList.length / 10
+                  let theAnswer = Math.floor( ( Math.random( ) * 10 ) * theListLength  ) 
+                  return aList[theAnswer]
+              }
+              
+              let result = randomWordPicker(theList)
+              document.getElementById("setting").innerHTML = result
+            </script>
+          
+        </div>    
+        
+      </div>
+      <!-- picture -->
+    </div>
+    
+    </div>
+  </main>
+
+  <script>
+    // Standard Google Universal Analytics code
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      },
+        i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      // Note: https protocol here
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-144253676-3', 'auto');
+
+    // Removes failing protocol check. @see: http://stackoverflow.com/a/22152353/1958200
+    ga('set', 'checkProtocolTask', function () { });
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview', '/desktop.html');
+  </script>
+</body>
+
+</html>
